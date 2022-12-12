@@ -1,0 +1,65 @@
+//Configuración de los contenidos centrales del layout
+@mixin items-content {
+    .div-content{
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+        .item-div-content{
+            width: 330px;
+            height: 100px;
+            border-radius: 50px;
+            box-shadow: 0px 0px 5px #aaaaaa;
+            margin-right: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+    
+            .logo-anim{
+                width: 45%;
+                margin-left: 5%;
+                img{
+                    width: 100%;
+                }
+            }
+            img {
+                height: 95px;            
+            }
+            p{
+                width: 40%;
+                font-family: 'Nexa L', sans-serif;
+                font-size: 18px;
+                color: $font-item-content;
+                margin: 0;
+                padding-left: 5px;
+            }
+        }
+    }
+}
+
+//CSS de las preguntas de las evaluaciones
+@mixin titlequestions {
+    width: 100%;
+    margin-top: 20px;
+    .pregunta{
+        display: flex;
+        flex-direction: row;
+
+        p{
+            margin: 0;
+            font-family: cursive;
+            font-size: 20px;
+            color: $font-blue;
+        }
+
+        .numeracion{
+            font-family: cursive;
+            font-size: 20px;
+            color: $font-red;
+            margin-right: 1%;
+        }
+    }    
+}
