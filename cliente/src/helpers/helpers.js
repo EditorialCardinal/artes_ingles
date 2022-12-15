@@ -1,4 +1,7 @@
-import { PlayCircleOutlined, FileDoneOutlined, FieldTimeOutlined, ExceptionOutlined } from '@ant-design/icons';
+import { PlayCircleOutlined, FileDoneOutlined, FieldTimeOutlined, 
+        ExceptionOutlined, YoutubeOutlined, LinkOutlined, 
+        FormOutlined, FileSyncOutlined   } 
+from '@ant-design/icons';
 
 export function ulrActual(urlPath){    
     let identificador;
@@ -48,11 +51,17 @@ export function cambioIcon(icono, clase){
     let iconoResibido;
 
     if (icono === '/panelEstudiante') {
-        iconoResibido = < FieldTimeOutlined className={clase}/>;
-    } else if(icono === '/talleres'){
-        iconoResibido = < ExceptionOutlined className={clase}/>;
+        iconoResibido = < YoutubeOutlined  className={clase}/>;
+    } else if(icono === '/enlaces'){
+        iconoResibido = < LinkOutlined className={clase}/>;
     }else if(icono === '/interactivo'){
         iconoResibido = < PlayCircleOutlined className={clase}/>;
+    }else if(icono === '/actividades'){
+        iconoResibido = < FormOutlined className={clase}/>;
+    }else if(icono === '/complementos'){
+        iconoResibido = < FileSyncOutlined className={clase}/>;
+    }else if(icono === '/evaluaciones'){
+        iconoResibido = < FieldTimeOutlined className={clase}/>;
     }else{
         iconoResibido = <FileDoneOutlined  className={clase}/>;
     }

@@ -42,7 +42,7 @@ const Header = () => {
 					(usuario) ? <p>{usuario.texto}</p> : null
 				}           
 			</div>
-			<p className='text-libro' onClick={() => cerrar()}><LogoutOutlined className='btnCerrar' /> Cerrar Sesión</p>
+			<p className='text-libro' onClick={() => cerrar()}><LogoutOutlined className='btnCerrar' /> Sign Off</p>
 		</div>
 	)
 }

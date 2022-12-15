@@ -11,12 +11,12 @@ import './Aside.scss';
 
 const listOptions = [
 	{ classLink: "link", route: "/panelEstudiante", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Videos" },
-	{ classLink: "link", route: "/enlaces", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Enlaces" },
-    { classLink: "link", route: "/actividades", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Actividades" },
-    { classLink: "link", route: "/interactivo", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Interactivo"},
-	{ classLink: "link", route: "/complementos", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Complementos"},
-	{ classLink: "link", route: "/evaluaciones", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Evaluaciones"},
-	{ classLink: "link", route: "/calificaciones", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Calificaciones"}
+	{ classLink: "link", route: "/enlaces", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Link" },
+    { classLink: "link", route: "/actividades", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Activities" },
+    { classLink: "link", route: "/interactivo", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Interactive"},
+	{ classLink: "link", route: "/complementos", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Additional"},
+	{ classLink: "link", route: "/evaluaciones", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Evaluations"},
+	{ classLink: "link", route: "/calificaciones", classIcon:"iconLink", classSpan:"nav-text", textSpan:"Ratings"}
 ]
 
 
