@@ -9,8 +9,6 @@ import ImgRegister from '../../images/logoRegistro.png';
 import Alerta from '../Alertas/Alerta';
 import comprensionContext from '../../context/auth/comprensionContext';
 
-//import './Register.scss';
-
 const Register = () => {
     const [usuario, setUsuario] = useState({
 		nombres: '',
@@ -26,7 +24,7 @@ const Register = () => {
 
     //Obtener el State del Context
 	const stateComprension = useContext(comprensionContext);
-	const {formularioAlerta, registrarUsuario, registrado} = stateComprension;
+	const {formularioAlerta, registrarUsuario } = stateComprension;
 
     const onChange = (e) => {
 		if (e.target.name === "privacyPolicy") {
@@ -62,11 +60,11 @@ const Register = () => {
 			return;
 		}		
 	    
-        /*
+        
 		registrarUsuario({
 			nombres, email, institucion, pin, password
 		});
-        */
+        
 	}
 
     return (

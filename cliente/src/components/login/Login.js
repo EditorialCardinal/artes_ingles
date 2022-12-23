@@ -31,12 +31,12 @@ const Login = () => {
 			formularioAlerta('Todos los campos son obligatorios', 'error');
 			return
 		}
-        /*		
+        		
 		loginUsuario({
 			email,
 			password,
 		});
-        */
+        
 	}	
 	useEffect(() => {
 		if(autenticado){

@@ -2,7 +2,7 @@ const Users = require('../models/Users');
 const { validationResult} = require('express-validator');
 const bcrypt = require('bcrypt');
 const Pines = require('../models/Pines');
-//const jwt = require('../services/jwt');
+const jwt = require('../services/jwt');
 
 
 exports.agregarUsuarios = async(req, res) => {
@@ -50,4 +50,39 @@ exports.agregarUsuarios = async(req, res) => {
     } catch (error) {
         res.status(400).send('Hubo un error');
     }    
+}
+
+exports.loginUser = async (req, res) => {
+    try {
+        const {email, password} = req.body;
+
+        //Validamos que el usuario exista
+        let user = await Users.findOne({email});
+        if(!user) {
+            return res.status(400).json({msg: 'El usuario no existe'});
+        }
+
+        //Comparamos las contraseñas
+        const correctPass = bcrypt.compareSync(password, user.password);
+        if(!correctPass) {
+            return res.status(400).json({msg: 'Contraseña Incorrecta' })
+        };
+        res.status(200).send({
+            accessToken: jwt.createAccessToken(user)           
+        });
+    } catch (error) {
+        res.status(500).json(error);
+    }
+}
+
+
+// Obtiene que usuario esta autenticado
+exports.usuarioAutenticado = async (req, res) => {
+    try {
+        const usuario = await Users.findById(req.usuario.id).select('-password -registro -pin');
+        res.json({usuario});
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({msg: 'Hubo un error'});
+    }
 }

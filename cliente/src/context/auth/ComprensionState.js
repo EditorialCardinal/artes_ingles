@@ -30,7 +30,6 @@ const ComprensionState = (props) => {
 		mensaje: null,
         usuario: null, 
         autenticado: false,
-        registrado: false,
         iconMenu: false,
         timetest: 80,
         informacionTest: null,
@@ -123,8 +122,8 @@ const ComprensionState = (props) => {
 
     //Cuando el usuario Inicia Sesion
     const loginUsuario = async (data) => {
-        obtenerEvaluaciones();
-        obtenerPrueba();        
+        //obtenerEvaluaciones();
+        //obtenerPrueba();        
         setTimeout(async () => {
             try {
                 const respuesta = await clienteAxios.post('/login', data);  
@@ -134,7 +133,7 @@ const ComprensionState = (props) => {
                 });                
                 setTimeout(() => {
                     usuarioAutenticado();
-                    consultarCalificacion();
+                    //consultarCalificacion();
                 }, 400)
             } catch (error) {
                 const alert = {
@@ -240,7 +239,6 @@ const ComprensionState = (props) => {
                 autenticado: state.autenticado,
                 usuario: state.usuario,
                 token: state.token,
-                registrado: state.registrado,
                 iconMenu: state.iconMenu,
                 informacionTest: state.informacionTest,
                 evaluaciones: state.evaluaciones,
